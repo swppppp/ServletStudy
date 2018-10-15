@@ -66,7 +66,18 @@ DispatchServlet에서 실습
 - 쿠키에는 한글사용 못함  
 > 쿠키생성서블릿: URLEncoder.encode(cookieName, "utf-8")  
 > 쿠키사용서블릿: URLDecoder.decode(cookieName, "utf-8")  
-
+         
+ #### 데이터공유 summary   
+ - 서블릿 간 데이터공유 3가지  
+ > - servletContext: 서버에 1개 생성, 서블릿이 직접주고받는데이터가 아님, 모든 서블릿이 공유, 잘 안씀
+ > - session: 브라우저당 1개, 쇼핑몰같은거 만들때 쓰여  
+ > - request: 요청객체. forward시키면 request객체에 담긴 데이터 공유    
+ 
+ ## 파일 업로드  
+ - form속성 중 enctype: "multipart/form-data"  
+ - apache제공 파일 업로드 라이브러리를 사용함  
+ 
+ 
 
 
 
